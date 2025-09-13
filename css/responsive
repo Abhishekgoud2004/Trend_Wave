@@ -1,0 +1,10 @@
+@media (min-width:360px) and (max-width: 400px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .marquee-container {
+        width: 100%;
+        height: 5vh;
+    }
+}

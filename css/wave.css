@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-X: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+span{
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.carousel-item {
+    width: 100%;
+    height: 80vh !important;
+    padding: 0px !important;
+}
+.marquee-container{
+    width: 100%;
+    height: 15vh;
+    background-color:rgb(168, 168, 168);
+    justify-content: center;
+    overflow: hidden;
+}
+.marquee-content img{
+    width: 100px;
+    border-radius: 5px;
+}
+.marquee-content {
+  animation: scroll-left 15s linear infinite; 
+  justify-content:space-evenly;
+}
+
+@keyframes scroll-left {
+  0%{
+    transform: translateX(0%); /* Start position */
+  }
+  100%{
+    transform: translateX(-100%); /* End position (moves left by 100% of its own width) */
+  }
+}
+.marquee-content div:hover img{
+    margin-top: -5px;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+.card:hover .overlay{
+  background-color:rgb(0, 0, 0, 0.5);
+}
+.card:hover img{
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
+}
+.item{
+  position: relative;
+}
+.btn-container{
+  position:absolute;
+  bottom: 110px;
+  transition: 0.4 ease;
+  display: flex;
+  gap: 100px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+.btn-container .btn1{
+  transform: translateX(-30vw);
+  border-radius: 7px;
+  text-decoration: none;
+}
+.btn-container .btn2{
+  transform: translateX(27vw);
+  border-radius: 7px;
+  text-decoration: none;
+}
+.item:hover .btn1{
+  transform: translate(0vw);
+  transition: all 0.5s;
+  z-index: 2;
+  background-color: black;
+  color: white;
+}
+.item:hover .btn2{
+  transform: translate(0vw);
+  transition: all 0.5s;
+  z-index: 2;
+  background-color: white;
+  color: black;
+}
+.item:hover .btn-container{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+footer ul li a:hover{
+  color: rgb(130, 40, 40) !important;
+}
+
+.contact form input::placeholder{
+  color: rgb(44, 41, 41);
+}
+.contact form textarea::placeholder{
+  color: rgb(44, 43, 43);
+}
+.offer{
+  overflow-x: hidden;
+}
+
+
